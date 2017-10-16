@@ -1,0 +1,46 @@
+Module                  Size  Used by
+wasawasa               16384  0
+ipv6                  311296  24
+binfmt_misc            16384  1
+it87                   40960  0
+hwmon_vid              16384  1 it87
+loop                   24576  0
+usb_storage            53248  0
+nvidia              10510336  28
+snd_hda_codec_realtek    69632  1
+snd_hda_codec_generic    61440  1 snd_hda_codec_realtek
+snd_hda_intel          24576  5
+snd_hda_codec          73728  3 snd_hda_intel,snd_hda_codec_generic,snd_hda_codec_realtek
+iTCO_wdt               16384  0
+snd_hda_core           45056  4 snd_hda_intel,snd_hda_codec,snd_hda_codec_generic,snd_hda_codec_realtek
+snd_pcm                73728  4 snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_timer              28672  2 snd_pcm
+coretemp               16384  0
+snd                    49152  13 snd_hda_intel,snd_hda_codec,snd_timer,snd_hda_codec_generic,snd_pcm
+hwmon                  16384  2 coretemp,it87
+soundcore              16384  1 snd
+evdev                  20480  0
+mousedev               20480  1
+lpc_ich                24576  0
+mfd_core               16384  1 lpc_ich
+button                 16384  0
+psmouse                24576  0
+atkbd                  24576  0
+libps2                 16384  2 atkbd,psmouse
+i2c_i801               20480  0
+sr_mod                 20480  0
+cdrom                  28672  1 sr_mod
+i2c_core               36864  2 nvidia,i2c_i801
+firewire_ohci          36864  0
+firewire_core          53248  1 firewire_ohci
+r8169                  69632  0
+crc_itu_t              16384  1 firewire_core
+mii                    16384  1 r8169
+ehci_pci               16384  0
+uhci_hcd               28672  0
+ehci_hcd               45056  1 ehci_pci
+sd_mod                 36864  31
+usbcore               147456  4 usb_storage,ehci_hcd,uhci_hcd,ehci_pci
+usb_common             16384  1 usbcore
+i8042                  24576  0
+serio                  20480  5 atkbd,psmouse,i8042
